@@ -31,3 +31,5 @@ int IsNoisySensorInputs(double* values, int numOfValues, double maxDelta);
 
 int validateReadings(InputSignalConfig InputSignal[Max_InputSignal]);
 
+extern int mainController(InputSignalConfig InputSignal[Max_InputSignal]);
+
