@@ -20,17 +20,15 @@ int IsNoisySensorInputs(double* values, int numOfValues,double maxDelta) {
 
 int validateReadings(InputSignalConfig InputSignal[Max_InputSignal])
 {	
-    int Isvalidinput=1;
 	for(int Itr_Signal=0; Itr_Signal<Max_InputSignal; Itr_Signal++){
 	    if(InputSignal[Itr_Signal].values!=NULL){
-		    if(IsNoisySensorInputs(InputSignal[Itr_Signal].values,InputSignal[Itr_Signal].numOfValues,NoiseLimit[Itr_Signal])) {
-			    InputSignal[Itr_Signal].NoiseDetected = true;
-			    Isvalidinput=0;
-		    }
+		   InputSignal[Itr_Signal].NoiseDetected = IsNoisySensorInputs(InputSignal[Itr_Signal].values,InputSignal[Itr_Signal].numOfValues,NoiseLimit[Itr_Signal]);
+		    
+			}
+		    
 	    }
-			printf("\tNoiseDetected - %d\n",InputSignal[Itr_Signal].NoiseDetected);
-	}
-	return Isvalidinput;
+			
+	return mainController(InputSignal);
 }
 
 int main()
