@@ -1,6 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<stdbool.h>
+#include <assert.h>
 
-int _give_me_a_good_name(double value, double nextValue, double maxDelta);
 
-int validateSOCreadings(double* values, int numOfValues);
+typedef enum
+{
+	CurrentSignal,
+	SOC_Signal,
+	Max_InputSignal
+	
+}InputSignalList;
 
-int validateCurrentreadings(double* values, int numOfValues);
+
+typedef  struct
+{
+	double* values;
+	int numOfValues;
+	bool  NoiseDetected;
+}InputSignalConfig;
+
+
+static const double NoiseLimit[Max_InputSignal]={2,5};
+
+
+
+int suddenJumpDetected(double value, double nextValue, double maxDelta);
+
+int IsNoisySensorInputs(double* values, int numOfValues, double maxDelta);
+
+int validateReadings(InputSignalConfig InputSignal[Max_InputSignal]);
+
