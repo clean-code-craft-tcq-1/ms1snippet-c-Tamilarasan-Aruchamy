@@ -1,6 +1,17 @@
 #include "sensor-validate.h"
 
 
+int suddenJumpDetected(double value, double nextValue, double maxDelta);
+
+int IsNoisySensorInputs(double* values, int numOfValues, double maxDelta);
+
+int validateReadings(InputSignalConfig InputSignal[Max_InputSignal]);
+
+extern int mainController(InputSignalConfig InputSignal[Max_InputSignal]);
+
+
+
+
 int suddenJumpDetected(double value, double nextValue, double maxDelta) {
   if(abs(nextValue - value) > maxDelta) {
     return 1;
