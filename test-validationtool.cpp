@@ -30,7 +30,7 @@ TEST_CASE("Not report error when NULL parameter passed") {
         double tc3_SOCvalues[]={1,2,3,4,5,6};
 
         InputSignalConfig tc3_InputSignal[Max_InputSignal]={	{NULL,	sizeof(tc3_Currentvalues)/sizeof(double)},\
-								{NULL,		sizeof(tc2_SOCvalues)/sizeof(double)}};
+								{NULL,		sizeof(tc3_SOCvalues)/sizeof(double)}};
  
   REQUIRE(validateReadings(tc3_InputSignal) == 1);
   
