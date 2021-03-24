@@ -42,6 +42,7 @@ int validateReadings(InputSignalConfig InputSignal[Max_InputSignal])
 	return mainController(InputSignal);
 }
 
+/*
 int main()
 {
     
@@ -77,4 +78,4 @@ TEST_CASE(3);
 		
  return 1;
 	
-}
+} */
