@@ -3,6 +3,8 @@
 #include "test/catch.hpp"
 #include "sensor-validate.h"
 
+extern int validateReadings(InputSignalConfig InputSignal[Max_InputSignal]);
+
 TEST_CASE("reports error when soc jumps abruptly") {
    double tc1_Currentvalues[]={1,1,1,1.5,2};
    double tc1_SOCvalues[]={1,2,3,4,5,15};
