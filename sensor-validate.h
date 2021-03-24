@@ -34,7 +34,7 @@ typedef struct
 }FailureMessageConfig;
 
 
-int DisplayLanguage = English; // Default Language is English
+//int DisplayLanguage = English; // Default Language is English
 
 
 static const double NoiseLimit[Max_InputSignal]={2,5}; // Index 0 - MaxDelta_CurrentSignal,1 - MaxDelta_SOCSignal
