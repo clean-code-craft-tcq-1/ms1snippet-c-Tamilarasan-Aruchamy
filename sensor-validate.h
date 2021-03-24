@@ -39,7 +39,7 @@ int DisplayLanguage = English; // Default Language is English
 
 static const double NoiseLimit[Max_InputSignal]={2,5}; // Index 0 - MaxDelta_CurrentSignal,1 - MaxDelta_SOCSignal
 
-static const FailureMessageConfig FailureMessage[Max_InputSignal]= { \
+static const FailureMessageConfig FailureMessages[Max_InputSignal]= { \
 		/* Index 0-In English , 1- In German */ \
 	 {"Noise Detected in Current Input Signal","Rauschen im Stromeingangssignal erkannt"}, /* FailureMessage when Noise in Current Input */ \
 	 {"Noise Detected in SOC Input Signal","Rauschen im SOC-Eingangssignal erkannt"}};	/* FailureMessage when Noise in SOC Input */
